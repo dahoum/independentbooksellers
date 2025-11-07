@@ -101,7 +101,7 @@ bookshops_and_cafes:
 - name: "Topping & Company Booksellers of Bath"
   lat: 51.38099432728279
   lng: -2.3583419391477802
-  address: "York St, Bath BA1 1NG, United Kingdom"
+  address: "York St, Bath BA1 1NG"
   www: "https://www.toppingbooks.co.uk/"
   icon: "goldIcon"
 
@@ -111,6 +111,17 @@ bookshops_and_cafes:
 - name: "Topping & Company Booksellers of Ely"
   lat: 52.39958574811215
   lng: 0.2633266616030511
-  address: "9 High St, ELY CB7 4LJ, United Kingdom"
+  address: "9 High St, ELY CB7 4LJ"
   www: "https://www.toppingbooks.co.uk"
+  icon: "goldIcon"
+
+## UK
+## STOCKPORT
+
+- name: "Talisman Books"
+  lat: 53.364863982487414
+  lng: -2.075694320251032
+  address: "Unit 4C Business Court (rear), 32 Buxton Rd, High Lane, Stockport SK6 8BH"
+  www: 
+  mail: f_leonard@sky.com
   icon: "goldIcon"

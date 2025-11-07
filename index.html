@@ -65,7 +65,7 @@
 
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Have feedback? Visit <a href="https://ijverlag.de/a-map-of-independent-booksellers-and-nearby-cafes">A Map of Independent Booksellers and nearby Cafés</a>.'
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Feedback? Visit <a href="https://ijverlag.de/a-map-of-independent-booksellers-and-nearby-cafes">A Map of Independent Booksellers and nearby Cafés</a>.'
             }).addTo(map);
 
             // Bookshop
@@ -97,15 +97,10 @@
                         const icon = marker.icon === 'goldIcon' ? goldIcon : blackIcon;
                         L.marker([marker.lat, marker.lng], { icon: icon })
                             .addTo(map)
-                            .bindPopup(`<b>${marker.name}</b><br>${marker.address}${marker.www ? `<br><a href="${marker.www}">www</a>` : ''}`);
+                            .bindPopup(`<b>${marker.name}</b><br>${marker.address}${marker.www ? `<br><a href="${marker.www}">www</a>` : ''}${marker.mail ? `<br><a href="mailto:${marker.mail}">@</a>` : ''}`);
                     });
                 })
                 .catch(err => console.error("Error loading YAML:", err));
-
-
-
-
-
 
         </script>
 
