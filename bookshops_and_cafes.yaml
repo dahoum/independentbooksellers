@@ -62,6 +62,19 @@ bookshops_and_cafes:
   www: "https://www.3klang-bar.de"
   icon: "blackIcon"
 
+# DEUTSCHLAND
+# FROHHEIM
+
+- name: 's blaue Stäffala
+  lat: 49.72116807631738
+  lng: 11.059374708398561
+  address: Wiesentstr. 1, 91301 Forchheim
+  www: https://www.genialokal.de/buchhandlung/forchheim/blaue-staeffala/
+  icon: "goldIcon"
+
+# DEUTSCHLAND
+# ZWINGENBERG
+
 - name: "Lichtblick Buchhandlung"
   lat: 49.71741201358476
   lng: 8.613721567873357
