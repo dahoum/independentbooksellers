@@ -87,7 +87,7 @@
 
             // const map = L.map('map').setView([49.87772102994678, 8.658690941103313], 13);
 
-            const map = L.map('map').locate({setView: true, maxZoom: 17});
+            const map = L.map('map');
             
             // setView([49.87772102994678, 8.658690941103313], 13);
 
@@ -95,6 +95,19 @@
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Did we make your day? Have a suggestion? <a href="https://ijverlag.de/map/">Tell us!</a>.'
             }).addTo(map);
+
+            function requestLocation()
+            {
+
+                map.locate({setView: true, maxZoom: 17});
+
+            }
+
+            document.getElementById('location-warning').querySelector('button').onclick = function()
+            {
+                document.getElementById('location-warning').style.display = 'none';
+                requestLocation();
+            };
 
             // Bookshop
             var goldIcon = new L.Icon({
