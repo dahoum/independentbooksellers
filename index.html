@@ -142,7 +142,7 @@
             function requestLocation()
             {
 
-                map.locate({setView: false});
+                map.locate({setView: true, maxZoom: 17});
 
                 map.on('locationfound', function(e)
                 {
@@ -163,12 +163,26 @@
                         distances.sort((a, b) => a.distance - b.distance);
                         const closestMarker = distances[0].marker;          
 
-                        // Calculate required zoom level to show the closest marker while keeping center
-                        const bounds = L.latLngBounds([e.latlng, [closestMarker.lat, closestMarker.lng]]);
+                       // Calculate distance to closest marker
+                       const distance = e.latlng.distanceTo([closestMarker.lat, closestMarker.lng]);
+                            
+                       // Set zoom level based on distance
+                       let zoom;
+                       if (distance < 500) {
+                           zoom = 16;
+                       } else if (distance < 2000) {
+                           zoom = 15;
+                       } else if (distance < 5000) {
+                           zoom = 14;
+                       } else if (distance < 10000) {
+                           zoom = 13;
+                       } else {
+                           zoom = 12;
+                       }
+                   
+                       // Only adjust zoom, keep center fixed
+                       map.setZoom(zoom);
 
-                        map.fitBounds(bounds, { padding: [50, 50],
-                                                maxZoom: 17  // Prevent zooming in too far
-                                              });
                  }
              });
 
